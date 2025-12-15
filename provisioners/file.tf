@@ -38,6 +38,10 @@ EOF
       ]
     }
 
+    provisioner "local-exec" {
+      command = "The new EC2 machine has been created"
+    }
+
     connection {
       type = "ssh"
       user = "ec2-user"

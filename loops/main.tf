@@ -31,6 +31,7 @@ variable "ami_ids" {
   default = ["ami-0fa91bc90632c73c9", "ami-0b46816ffa1234887", "ami-08526b399bb6eb2c7"]
 }
 
+//for
 output "public_ip" {
   value = {for id, instance in aws_instance.my_instance : id => instance.public_ip}
 }
